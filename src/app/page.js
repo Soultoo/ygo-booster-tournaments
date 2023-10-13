@@ -23,10 +23,16 @@ import CancelMatchButton from './CancelMatchButton';
 import SubmitMatchResults from './SubmitMatchResults';
 import NextSessionButton from './NextSessionButton';
 import CardShop from './CardShop';
+import SessionDisplay from './SessionDisplay';
+import BoosterAdder from './BoosterAdder';
+import RulesLinks from './RulesLinks';
 
 import createUserDocument from './createUserDocument';
 
 import './globals.css';
+
+
+
 
 
 
@@ -90,6 +96,12 @@ export default function Home() {
         <LoginCheck></LoginCheck>
         </div>
         <div className="componentStyle">
+          <RulesLinks/>
+        </div>
+        <div className="componentStyle">
+          <SessionDisplay/>
+        </div>
+        <div className="componentStyle">
           <UserDataTable/>
         </div>
         <div className="componentStyle">
@@ -120,6 +132,10 @@ export default function Home() {
         </div>
         
       }
+
+      <div className="componentStyle">
+          <BoosterAdder/>
+        </div>
       
       </div>
 

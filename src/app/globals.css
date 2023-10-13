@@ -366,3 +366,13 @@ body {
 .shopButton:active {
     transform: scale(0.95); /* Shrink the button a bit when active */
 }
+
+
+.booster-heading {
+    font-weight: bold;
+    font-size: 1.5em; /* Adjust this value to your liking */
+}
+
+.cancelMatchQuestion {
+    color: #333333;
+}

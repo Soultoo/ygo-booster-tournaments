@@ -107,18 +107,29 @@ const CardShop = () => {
     ultimateRares * RARITY_VALUES.ultimateRares + ghostRares * RARITY_VALUES.ghostRares;
 
     const sellDuplicates = async () => {
-      console.log(totalValue);
+    console.log(totalValue);
     if (userSnapshot) {
         try {
             await updateDoc(userRef, {
                 money: increment(totalValue),
                 moneyAccrued: increment(totalValue)
             });
+
+            // Reset rarity counts to 0 after a successful sell
+            setCommons(0);
+            setRares(0);
+            setSuperRares(0);
+            setUltraRares(0);
+            setSecretRares(0);
+            setUltimateRares(0);
+            setGhostRares(0);
+
         } catch (error) {
             console.error("Error selling duplicates: ", error);
         }
     }
 };
+
 
 
     return (
